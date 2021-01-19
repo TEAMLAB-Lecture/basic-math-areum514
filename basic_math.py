@@ -93,7 +93,13 @@ def get_median(number_list):
     number_list.sort()
     list_len=len(number_list)
     if list_len%2==0:
-        median = (number_list[list_len//2]+number_list[list_len//2+1])/2
+        median = (number_list[list_len//2]+number_list[list_len//2-1])/2
     else:
         median = number_list[list_len//2]
     return median
+
+
+
+random_number_list = [6, 75, 79, 41, 38, 77, 1, 30, 69, 83]
+pred = get_median(random_number_list)
+print(pred)
